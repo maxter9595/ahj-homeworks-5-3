@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поиск билетов</title>
+</head>
+<body>
+  <form id="trip-form" novalidate>
+    <h2>Поиск билетов</h2>
+    <div class="form-group">
+      <label>Откуда</label>
+      <input type="text" id="from" class="from-field" placeholder="Город отправления" required>
+      <div class="popover-container">
+        <div class="popover">
+          <div class="popover-header">Подсказка</div>
+          <div class="popover-body">Введите город отправления</div>
+          <div class="popover-arrow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Куда</label>
+      <input type="text" id="to" class="to-field" placeholder="Город назначения" required>
+      <div class="popover-container">
+        <div class="popover">
+          <div class="popover-header">Подсказка</div>
+          <div class="popover-body">Введите город назначения</div>
+          <div class="popover-arrow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <label for="passengers">Кол-во пассажиров</label>
+        <div class="passenger-controls">
+          <button type="button" class="passenger-minus">-</button>
+          <input type="number" id="passengers" min="1" value="1" required>
+          <button type="button" class="passenger-plus">+</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="checkbox-label" for="round-trip">
+          <span class="checkbox-text">Туда и обратно</span>
+          <input type="checkbox" id="round-trip">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    <div class="date-container">
+      <div class="form-group">
+        <label>Туда</label>
+        <input type="date" id="departure-date" required>
+        <div class="popover-container">
+          <div class="popover">
+            <div class="popover-header">Подсказка</div>
+            <div class="popover-body">Введите дату отбытия</div>
+            <div class="popover-arrow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" id="return-date-group">
+        <label>Обратно</label>
+        <input type="date" id="return-date">
+        <div class="popover-container">
+          <div class="popover">
+            <div class="popover-header">Подсказка</div>
+            <div class="popover-body">Введите дату возврата</div>
+            <div class="popover-arrow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="submit-button" type="submit">Найти билеты</button>
+    <div id="success-message" class="hidden">
+      <p>Данные для поиска билетов получены!</p>
+    </div>
+  </form>
+</body>
+</html>
